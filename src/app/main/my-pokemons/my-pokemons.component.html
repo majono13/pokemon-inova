@@ -1,0 +1,30 @@
+<div class="row content pb-5">
+    <ng-container *ngIf="data.length > 0">
+        <div class="col-md-4 col-lg-3 text-center mt-3 d-flex justify-content-center" *ngFor="let pokemon of data">
+            <div class="pokemon-card">
+                <div>
+                    <i class="pi pi-trash" pTooltip="Excluir" (click)="delete(pokemon.uid)"></i>
+                </div>
+                <h4>{{ pokemon.name.toUpperCase() }}</h4>
+                <div class="info">
+                    <span>Capturado em: {{ pokemon.city }}, {{ pokemon.temp }}°C</span>
+                </div>
+                <h6>{{ pokemon.type }}</h6>
+                <div class="pokemon-image">
+                    <img [src]="pokemon.image" [alt]="'Imagem pokémon ' + pokemon.name">
+                </div>
+                <div>
+                    <div *ngFor="let status of pokemon.status" class="status">
+                        <span>{{ status.name }}</span>
+                        <div class="bar">
+                            <div class="status-bar" [style]="status.value | statusBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div *ngIf="data.length === 0" class="mt-5">
+        Nenhum pokémon encontrado...
+    </div>
+</div>

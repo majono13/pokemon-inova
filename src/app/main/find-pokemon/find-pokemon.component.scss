@@ -1,0 +1,49 @@
+section {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.247);
+    width: 70vw;
+    min-height: 80vh;
+    .content {
+        width: 100%;
+        text-align: center;
+        h1 {
+            font-size: 1.8rem;
+            display: inline;
+            border-bottom: 1px solid black;
+        }
+
+        form {
+            text-align: left;
+            .input {
+                margin-right: 1rem;
+            }
+        }
+
+        .temp-info {
+            padding: 10px;
+            background: var(--primary);
+            border-radius: 10px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    section {
+        width: 95vw;
+        min-width: 300px;
+    }
+    .buttons {
+        margin-top: 1rem;
+        text-align: end;
+    }
+    .input {
+        margin-right: 0rem !important;
+    }
+}
+
+.background-div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

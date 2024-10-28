@@ -1,0 +1,47 @@
+nav {
+    height: 80px;
+    background: var(--black);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.082);
+    .logo {
+        height: 100%;
+        width: 100px;
+        img {
+            height: 80%;
+            width: 100%;
+        }
+    }
+
+    span {
+        color: white;
+        margin-right: 1rem;
+        cursor: pointer;
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0%;
+            background-color: white;
+            transition: width 0.5s;
+        }
+        
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 432px) {
+    nav {
+        justify-content: center !important;
+        span {
+            font-size: 1rem;
+        }
+        .logo {
+            display: none !important;
+        }
+    }
+}

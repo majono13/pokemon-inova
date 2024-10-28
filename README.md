@@ -1,27 +1,25 @@
 # Pokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+<p>O pojeto "Pokémon" foi desenvolvido utilizando angular na versão 13. O projeto utiliza o boostrap  na versão 5 (apnas utilização de grid e algumas classes) e primeNG na versão 13 (versão compátivel com a versão Angular).</p>
+<p>A altenticação é feita utilizando o firebase, onde o projeto está hospedado. <a href="https://pokemon-inova.web.app">Clique aqui para acessar.</a></p>
 
-## Development server
+## Instalação dos pacotes:
+- Após clonar o repositório, executar npm i.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Inicialização do projeto:
+ - Executar o projeto com ng s ou ng s -o
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Intruções de uso do APP
 
-## Build
+### Passo 1:
+ - Realizar login utilizando alguma conta google. As rotas principais não são acessíveis caso o usuário não esteja logado. A autenticação é feita pelo google <b>e é 100% segura.</b>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Passo 2:
+  - Após o login, o usuário é direcionado para tela onde é possível realizar a busca pelos pokémons. Basta inserir a cidade que deseja (Pt ou En) e clicar em "Buscar" ou pressionar a tecla "Enter".
+  - Após a bsuca ser finalizada será exibido o pokémon encontrado com a opção "Capturar", essa opção irá adicionar o pokémon a sua lista de pokémons acessíveis atráves do menu "Meus Pokémons".
 
-## Running unit tests
+### Passo 3:
+ - Ao acessar o menu "Meus Pokémons" você poderá ver seus pokémons, as informações sobre os status desses pokémons e também a cidade e temperatura do local quando o pokémon foi capturado.
+ - É possível remover os pokémons da lista ao clicar no ícone da lixeira sobre o nome.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

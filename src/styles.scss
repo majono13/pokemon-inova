@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary: #E4E4E4;
+    --secondary: #F5483C;
+    --black: #252526;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--primary);
+}
+
+.height-100 {
+    min-height: calc(100vh - 80px); //Cálculo removendo a altura da navbar
+}
+
+
+.primary-button {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ff837a, 0 1px 2px 0 black !important;
+    }
+}
+
+.button-light {
+    background: var(--primary) !important;
+    border-color: var(--black) !important;
+    color: var(--black) !important;
+    &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #E4E4E4, 0 1px 2px 0 black !important;
+    }
+}
+
+.pokemon-card {
+    width: 250px;
+    background: var(--primary);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid #9b9b9b;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.082);
+    h4 {
+        color: var(--secondary);
+    }
+
+    .pokemon-image img {
+        width: 60%;
+    }
+
+    .status {
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.24);
+            border-radius: 5px;
+            position: relative;
+            .status-bar {
+                border-radius: 5px;
+                position: absolute;
+                height: 100%;
+                background: green;
+            }
+        }
+    }
+}
