@@ -11,7 +11,6 @@ constructor(private authService: AuthService, private router: Router) { }
 
 async canActivate(): Promise<boolean> {
   const isAuthenticated = await this.authService.validateToken();
-  console.log(isAuthenticated)
   if (isAuthenticated) {
     return true;
   } else {

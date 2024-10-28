@@ -22,7 +22,6 @@ export class EntityService<T> {
   }
 
   list(userId: string, collection: string) {
-    console.log(userId)
     return this.firestore!.collection<T>(collection, ref => ref.where('userId', '==', userId)).valueChanges();
   }
 

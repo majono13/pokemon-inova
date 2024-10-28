@@ -174,7 +174,7 @@ export class FindPokemonComponent implements OnInit, OnDestroy {
       this.utilsService.addMessage('success', 'Pokemon capturado!', '')
       this.clear();
     })
-    .catch(() => this.utilsService.addMessage('error', 'Falha ao salvar', 'Ocorreu um erro ao tentar salvar os dados. Por favor, tente novamente.'));
+    .catch((err) => this.utilsService.addMessage('error', 'Falha ao salvar', 'Ocorreu um erro ao tentar salvar os dados. Por favor, tente novamente.'));
   }
 
 }
